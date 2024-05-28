@@ -23,7 +23,7 @@ for currentDepot in "${depotIdList[@]}"
 do
   eval "currentDepotPath=\$depot${i}Path"
   eval "currentDepotInstallScriptPath=\$depot${i}InstallScriptPath"
-  i+=1;
+  i=$((i+1));
   if [ -n "$currentDepotPath" ]; then
     # If the depot has an install script, add it to the depot manifest
     if [ -n "${currentDepotInstallScriptPath:-}" ]; then
