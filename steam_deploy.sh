@@ -19,7 +19,8 @@ echo ""
 depotIdList=($depot1Id $depot2Id $depot3Id)
 i=1;
 export DEPOTS="\n  "
-for currentDepot in "${$depotIdList[@]}"
+for currentDepot in "${depotIdList[@]}"
+do
   eval "currentDepotPath=\$depot${i}Path"
   eval "currentDepotInstallScriptPath=\$depot${i}InstallScriptPath"
   i+=1;
