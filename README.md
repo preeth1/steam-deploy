@@ -118,7 +118,7 @@ The relative path following your root path for the files to be included in this 
 
 If your appId is 125000 then the depots 125001 ... 125009 will be assumed.
 
-#### depotIdList
+#### depot[X]Id
 
 A list of depot ids used for this build. ** This is the original reason for creating this fork. **
 

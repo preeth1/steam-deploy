@@ -16,9 +16,15 @@ inputs:
     required: true
     default: ''
     description: 'The app id within steam partner network.'
-  depotIdList:
+  depot1Id:
     required: true
-    description: 'A list of depot ids used for this build.'
+    description: 'Depot ID #1.'
+  depot2Id:
+    required: true
+    description: 'Depot ID #2.'
+  depot3Id:
+    required: true
+    description: 'Depot ID #3.'
   buildDescription:
     required: false
     description: 'Description for this build.'
@@ -93,7 +99,9 @@ runs:
     steam_totp: ${{ inputs.totp }}
     configVdf: ${{ inputs.configVdf }}
     appId: ${{ inputs.appId }}
-    depotIdList: ${{ inputs.depotIdList }}
+    depot1Id: ${{ inputs.depot1Id }}
+    depot2Id: ${{ inputs.depot2Id }}
+    depot3Id: ${{ inputs.depot3Id }}
     buildDescription: ${{ inputs.buildDescription }}
     rootPath: ${{ inputs.rootPath }}
     depot1Path: ${{ inputs.depot1Path }}

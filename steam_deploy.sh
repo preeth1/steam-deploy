@@ -16,6 +16,7 @@ echo "#   Generating Depot Manifests  #"
 echo "#################################"
 echo ""
 
+depotIdList=($depot1Id $depot2Id $depot3Id)
 i=1;
 export DEPOTS="\n  "
 for currentDepot in "${$depotIdList[@]}"
