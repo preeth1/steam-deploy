@@ -16,22 +16,13 @@ echo "#   Generating Depot Manifests  #"
 echo "#################################"
 echo ""
 
-if [ -n "$firstDepotIdOverride" ]; then
-  firstDepotId=$firstDepotIdOverride
-else
-  # The first depot ID of a standard Steam app is the app's ID plus one
-  firstDepotId=$((appId + 1))
-fi
-
 i=1;
 export DEPOTS="\n  "
-until [ $i -gt 9 ]; do
+for currentDepot in "${$depotIdList[@]}"
   eval "currentDepotPath=\$depot${i}Path"
   eval "currentDepotInstallScriptPath=\$depot${i}InstallScriptPath"
+  i+=1;
   if [ -n "$currentDepotPath" ]; then
-    # depot1Path uses firstDepotId, depot2Path uses firstDepotId + 1, depot3Path uses firstDepotId + 2...
-    currentDepot=$((firstDepotId + i - 1))
-
     # If the depot has an install script, add it to the depot manifest
     if [ -n "${currentDepotInstallScriptPath:-}" ]; then
       echo ""

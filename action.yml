@@ -16,9 +16,9 @@ inputs:
     required: true
     default: ''
     description: 'The app id within steam partner network.'
-  firstDepotIdOverride:
-    required: false
-    description: 'An optional override to specify the ID of the first depot instead of using the app ID plus one.'
+  depotIdList:
+    required: true
+    description: 'A list of depot ids used for this build.'
   buildDescription:
     required: false
     description: 'Description for this build.'
@@ -93,7 +93,7 @@ runs:
     steam_totp: ${{ inputs.totp }}
     configVdf: ${{ inputs.configVdf }}
     appId: ${{ inputs.appId }}
-    firstDepotIdOverride: ${{ inputs.firstDepotIdOverride }}
+    depotIdList: ${{ inputs.depotIdList }}
     buildDescription: ${{ inputs.buildDescription }}
     rootPath: ${{ inputs.rootPath }}
     depot1Path: ${{ inputs.depot1Path }}

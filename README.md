@@ -118,13 +118,9 @@ The relative path following your root path for the files to be included in this 
 
 If your appId is 125000 then the depots 125001 ... 125009 will be assumed.
 
-#### firstDepotIdOverride
+#### depotIdList
 
-You can use this to override the ID of the first depot in case the IDs do not start as described in depot[X]Path (e.g. for DLCs).
-
-If your firstDepotId is 125000 then, regardless of the used appId, the depots 125000 ... 125008 will be assumed.
-
-_(feel free to contribute if you have a more complex use case!)_
+A list of depot ids used for this build. ** This is the original reason for creating this fork. **
 
 #### releaseBranch
 
